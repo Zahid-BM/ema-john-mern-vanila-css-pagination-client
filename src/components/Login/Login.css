@@ -4,10 +4,11 @@ border: 1px solid #95A0A7;
 box-sizing: border-box;
 border-radius: 8px;
 width: 500px;
-height: auto;
+height: 600px;
 margin: 70px auto;
 display: flex;
 justify-content: center;
+box-shadow: -12px 12px  #FFE0B3;;
 }
 .form-title {
     font-weight: 400;
@@ -48,4 +49,36 @@ margin-top: 47px;
 }
 form p{
     text-align: center;
+}
+.or-design{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    color: #95A0A7
+}
+.line{
+    width: 145px;;
+height: 20px;
+}
+.or{
+    margin:0 26px;
+}
+.google-login{
+    width: 415px;
+height: 55px;
+background: #FFFFFF;
+border: 1px solid #95A0A7;
+box-sizing: border-box;
+border-radius: 8px;
+font-weight: 400;
+font-size: 17px;
+color: #2A414F;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.google-logo{
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
 }
