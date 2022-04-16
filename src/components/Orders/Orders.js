@@ -33,8 +33,8 @@ const Orders = () => {
                 <Cart cart={cart}>
                     {/* <button onClick={() => navigate('/inventory')}>Proceed Checkout</button> */}
 
-                    <Link to='/inventory'>
-                        <button>Proceed Checkout</button>
+                    <Link to='/shipment'>
+                        <button>Proceed Shipment</button>
                     </Link>
                 </Cart>
             </div>
