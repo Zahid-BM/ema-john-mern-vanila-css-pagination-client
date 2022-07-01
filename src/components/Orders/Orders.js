@@ -8,15 +8,16 @@ import OrderReview from '../OrderReview/OrderReview';
 
 const Orders = () => {
     const [products, setProducts] = useProducts();
-    const [cart, setCart] = useCart(products); /* aim of this state is bring data from savedCart data from local storage */
+    const [cart, setCart] = useCart(); /* aim of this state is bring data from savedCart data from local storage */
     // page navigate using useNavigate hook
     /*  const navigate = useNavigate(); */
 
     const deleteButton = orderedItem => {
         /* to delete ordered item on click */
-        const restItems = cart.filter(item => item.id !== orderedItem.id);
-        setProducts(restItems);
-        removeFromDb(orderedItem.id);
+        const restItems = cart.filter(item => item._id !== orderedItem._id);
+        removeFromDb(orderedItem._id);
+        setCart(restItems);
+
     }
 
 
@@ -25,7 +26,7 @@ const Orders = () => {
         <div className='shop-container'>
             <div>
                 {
-                    cart.map(orderedItem => <OrderReview key={orderedItem.id} orderedItem={orderedItem} deleteButton={deleteButton}></OrderReview>)
+                    cart.map(orderedItem => <OrderReview key={orderedItem._id} orderedItem={orderedItem} deleteButton={deleteButton}></OrderReview>)
                 }
 
             </div>
